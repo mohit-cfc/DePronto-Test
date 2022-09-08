@@ -1,9 +1,6 @@
 console.log("Hello");
-const button = document.querySelector("#btn");
 const container = document.querySelector("#container");
-button.addEventListener("click", () => {
-  console.log("Clicked");
-});
+
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then((res) => res.json())
   .then((data) => {
