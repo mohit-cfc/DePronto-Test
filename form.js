@@ -1,8 +1,24 @@
-const form = document.querySelector("#form");
-console.log("Hello");
+const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  for (let data of form.elements) {
-    console.log(data.value);
-  }
+  fname = form.name.value;
+  date = form.date.value;
+  ftitle = form.feedback.value;
+  feedback = form.feedbacktext.value;
+  gender = form.gender.value;
+  check = form.checkbox;
+  check_arr = [];
+  check.forEach((item) => {
+    if (item.checked) {
+      check_arr.push(item.value);
+    }
+  });
+  console.log({
+    fname: fname,
+    date: date,
+    ftitle: ftitle,
+    feedback: feedback,
+    gender: gender,
+    check: check_arr,
+  });
 });
